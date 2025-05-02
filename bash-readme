@@ -1,0 +1,51 @@
+## Build & push Docker image
+
+docker buildx create --use
+
+docker buildx build --platform linux/amd64,linux/arm64 -t megazina/loan-frontend:latest --push .
+
+
+# Check IP
+kubectl get svc
+
+
+
+
+
+
+
+## FOR APP CREATION - may not need after an image
+
+
+#install brew
+
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"\n
+
+echo >> /Users/zratko/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/zratko/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+#install node
+
+brew install node
+
+#create app
+npx create-react-app banking-frontend
+cd banking-frontend
+
+#axios
+npm install axios
+
+#create files
+
+
+#install library
+
+npm install react-router-dom@latest
+
+
+# start
+
+npm start
+
+
